@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #4f44ff, #fc4a1a);
+    margin: 0;
+    padding: 0;
+    color: #ebebeb; 
+}
+
+.body-reflection {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    transform: scaleY(-1);
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #4f44ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 12px rgba(29, 27, 27, 0.3); 
+    animation: fadeIn 1s ease;
+    color: #ebebeb; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+.input-container input[type="text"] {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f1f1f1;
+    color: #1b1b1b; 
+}
+
+.input-container button {
+    background-color: #3cba54; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-container button:hover {
+    background-color: #2a8f3c; 
+}
+
+.task-list {
+    margin-top: 20px;
+}
+
+.task-item {
+    background-color: #1b1b1b;
+    padding: 15px;
+    border-bottom: 1px solid #d61212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-item .task-name {
+    flex-grow: 1;
+}
+
+.task-item button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.task-item button:hover {
+    background-color: #a42a1f; 
+}
+
+.task-item.completed {
+    background-color: #16c03e;
+}
+
+.task-item.completed button {
+    background-color: #4f44ff; 
+}
+
+
+.task-item.completed button:hover {
+    background-color: #5aaf64;
+}
+
+.task-summary {
+    margin-top: 20px;
+}
+
+.task-summary p {
+    margin: 5px 0; 
+}

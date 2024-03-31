@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #7F00FF, #00FFA1); 
+    margin: 0;
+    padding: 0;
+    color: #ebebeb; 
+}
+
+.body-reflection {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    transform: scaleY(-1);
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(120deg, #7F00FF, #00FFA1); 
+    border-radius: 10px;
+    box-shadow: 0 8px 12px rgba(29, 27, 27, 0.3); 
+    animation: fadeIn 1s ease, containerAnimation 2s ease-in-out infinite alternate; 
+    color: #ebebeb; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes containerAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: rgb(197, 22, 22);
+}
+
+.input-container {
+    margin-bottom: 20px;
+    color: rgb(65, 7, 15);
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="number"] {
+    width: 70px;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #7F00FF; 
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00FFA1; 
+}
+
+#result {
+    font-size: 20px;
+    color: #eb0303;
+}
+
+footer {
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+footer:hover {
+    color: #ff5733;
+}

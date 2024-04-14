@@ -1,0 +1,227 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #4CAF50, #2196F3);
+    animation: gradientAnimation 10s ease infinite alternate;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.container {
+    text-align: center;
+    color: white;
+    background-color: #E3F2FD; 
+}
+
+.weather-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    max-width: 450px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    text-align: center;
+}
+
+.weather-card:hover {
+    transform: scale(1.05);
+}
+
+#city-input {
+    padding: 15px;
+    margin: 10px 0;
+    width: 70%;
+    border: 2px solid #8196a7;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#city-input:focus {
+    outline: none;
+    border-color: #1565C0;
+}
+
+#city-input::placeholder {
+    color: #aaa;
+}
+
+#city-input-btn {
+    padding: 10px;
+    background-color: rgb(81, 90, 172);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+#city-input-btn:hover {
+    background-color: #365f8d;
+}
+
+.weather-card h3 {
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    background-color: #E3F2FD;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden; 
+}
+
+.weather-details::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent);
+    transform: translateY(-100%);
+    animation: reflectionAnimation 2s linear infinite; 
+}
+
+@keyframes reflectionAnimation {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.weather-detail {
+    flex-basis: 20%;
+    text-align: center;
+    padding: 10px 0;
+    color: #555;
+}
+
+.weather-detail:not(:last-child) {
+    margin-right: 20px;
+}
+
+.weather-detail i {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.weather-detail span {
+    font-size: 16px;
+}
+
+#weather-info {
+    display: none;
+}
+
+#weather-icon {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+#temperature {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 8px 0;
+    color: #333;
+}
+
+#description {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+#city-name {
+    font-size: 20px;
+    position: relative; 
+}
+
+#city-name::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent);
+    transform: translateY(-100%);
+    animation: reflectionAnimation 2s linear infinite; 
+}
+
+#date {
+    font-size: 14px;
+    color: rgb(7, 7, 7);
+    position: relative; 
+}
+
+#date::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent);
+    transform: translateY(-100%);
+    animation: reflectionAnimation 2s linear infinite; 
+}
+
+.unique-date {
+    font-size: 18px;
+    color: #0a0a0ae1;
+    font-style: italic;
+}
+
+.weather-card {
+    position: relative;
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.humidity-detail {
+    flex-basis: 20%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.humidity-detail i {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.humidity-detail span {
+    font-size: 16px;
+}

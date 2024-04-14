@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style5.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-card">
+            <h3>Weather App</h3>
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="city-input-btn" onclick="searchWeather()">Search</button>
+            <div id="weather-info" class="animate__animated animate__fadeIn">
+                <h3 id="city-name"></h3>
+                <p id="date" class="unique-date"></p>
+                <img id="weather-icon" src="" alt="Weather Icon">
+                <p id="temperature"></p>
+                <p id="description"></p>
+                <div class="weather-details">
+                    <div class="weather-detail-group">
+                        <div class="weather-detail">
+                            <i class="fas fa-wind"></i>
+                            <span id="wind-speed"></span>
+                        </div>
+                        <div class="weather-detail">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span id="pressure"></span>
+                        </div>
+                    </div>
+                    <div class="weather-detail-group">
+                        <div class="weather-detail">
+                            <i class="fas fa-eye"></i>
+                            <span id="visibility"></span>
+                        </div>
+                        <div class="weather-detail">
+                            <i class="fas fa-tint"></i>
+                            <span id="humidity"></span> 
+                        </div>
+                    </div>
+                    <div class="weather-detail-group">
+                        <div class="weather-detail">
+                            <i class="fas fa-thermometer-half"></i>
+                            <span id="min-temp"></span>
+                        </div>
+                        <div class="weather-detail">
+                            <i class="fas fa-thermometer-full"></i>
+                            <span id="max-temp"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@latest"></script>
+    <script src="script5.js"></script>
+</body>
+</html>
